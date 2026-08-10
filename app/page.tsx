@@ -223,7 +223,7 @@ export default function Home() {
   }, [candlesLit]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-purple-50 dark:from-stone-950 dark:via-stone-900 dark:to-stone-950 flex items-center justify-center p-4 md:p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-purple-50 dark:from-stone-950 dark:via-stone-900 dark:to-stone-950 flex items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03]" style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
@@ -231,8 +231,8 @@ export default function Home() {
       }} />
       
       {/* Ambient glow */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-rose-200/30 dark:bg-rose-900/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-200/30 dark:bg-purple-900/20 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-rose-200/30 dark:bg-rose-900/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-purple-200/30 dark:bg-purple-900/20 rounded-full blur-3xl" />
 
       {showConfetti && (
         <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
@@ -285,10 +285,10 @@ export default function Home() {
         }`}
       >
         {/* Hero Section */}
-        <div className="text-center mb-20 relative">
-          <div className="relative inline-block mb-10">
-            <div className="absolute -inset-4 bg-gradient-to-r from-rose-400 via-purple-400 to-rose-400 rounded-full opacity-20 blur-lg animate-pulse" />
-            <div className="relative w-36 h-36 rounded-full overflow-hidden ring-4 ring-white/80 dark:ring-stone-800 ring-offset-8 ring-offset-rose-50 dark:ring-offset-stone-950 shadow-xl">
+        <div className="text-center mb-12 sm:mb-16 md:mb-20 relative">
+          <div className="relative inline-block mb-6 sm:mb-8 md:mb-10">
+            <div className="absolute -inset-3 sm:-inset-4 bg-gradient-to-r from-rose-400 via-purple-400 to-rose-400 rounded-full opacity-20 blur-lg animate-pulse" />
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-full overflow-hidden ring-4 ring-white/80 dark:ring-stone-800 ring-offset-4 sm:ring-offset-6 md:ring-offset-8 ring-offset-rose-50 dark:ring-offset-stone-950 shadow-xl">
               <Image
                 src="/gab.jpg"
                 alt="Birthday celebrant"
@@ -299,28 +299,28 @@ export default function Home() {
               />
             </div>
             {candlesLit && (
-              <span className="absolute -bottom-2 -right-2 text-3xl animate-bounce">✨</span>
+              <span className="absolute -bottom-1 -right-1 sm:-bottom-2 sm:-right-2 text-2xl sm:text-3xl animate-bounce">✨</span>
             )}
           </div>
 
-          <p className="text-xs tracking-[0.4em] uppercase text-rose-400 dark:text-rose-300 mb-4 font-medium">
+          <p className="text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase text-rose-400 dark:text-rose-300 mb-3 sm:mb-4 font-medium">
             A celebration of
           </p>
-          <h1 className="text-6xl md:text-7xl font-serif italic text-stone-800 dark:text-stone-100 mb-6 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif italic text-stone-800 dark:text-stone-100 mb-4 sm:mb-6 tracking-tight">
             Happy Birthday
           </h1>
-          <div className="w-16 h-px bg-gradient-to-r from-transparent via-stone-300 dark:via-stone-600 to-transparent mx-auto mb-6" />
-          <p className="text-lg text-stone-500 dark:text-stone-400 font-light max-w-md mx-auto leading-relaxed italic">
+          <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-stone-300 dark:via-stone-600 to-transparent mx-auto mb-4 sm:mb-6" />
+          <p className="text-sm sm:text-base md:text-lg text-stone-500 dark:text-stone-400 font-light max-w-xs sm:max-w-sm md:max-w-md mx-auto leading-relaxed italic px-4">
             &ldquo;{birthdayQuotes[currentQuote]}&rdquo;
           </p>
         </div>
 
         {/* Candle Section */}
-        <div className="mb-20">
+        <div className="mb-12 sm:mb-16 md:mb-20">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-rose-100/50 via-purple-100/50 to-rose-100/50 dark:from-stone-800/50 dark:via-stone-700/50 dark:to-stone-800/50 rounded-3xl blur-xl" />
-            <div className="relative bg-white/70 dark:bg-stone-900/70 backdrop-blur-xl rounded-3xl p-10 border border-white/50 dark:border-stone-800/50 shadow-xl">
-              <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="absolute inset-0 bg-gradient-to-r from-rose-100/50 via-purple-100/50 to-rose-100/50 dark:from-stone-800/50 dark:via-stone-700/50 dark:to-stone-800/50 rounded-2xl sm:rounded-3xl blur-xl" />
+            <div className="relative bg-white/70 dark:bg-stone-900/70 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-white/50 dark:border-stone-800/50 shadow-xl">
+              <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <div
                     key={i}
@@ -330,44 +330,44 @@ export default function Home() {
                   >
                     {candlesLit ? (
                       <div className="flex flex-col items-center">
-                        <div className="w-1.5 h-4 bg-gradient-to-t from-orange-500 via-yellow-400 to-amber-200 rounded-full animate-flicker shadow-lg shadow-orange-500/50" />
-                        <div className="w-4 h-10 bg-gradient-to-b from-stone-100 to-stone-200 dark:from-stone-600 dark:to-stone-700 rounded-full shadow-inner" />
+                        <div className="w-1 sm:w-1.5 h-3 sm:h-4 bg-gradient-to-t from-orange-500 via-yellow-400 to-amber-200 rounded-full animate-flicker shadow-lg shadow-orange-500/50" />
+                        <div className="w-3 sm:w-4 h-8 sm:h-10 bg-gradient-to-b from-stone-100 to-stone-200 dark:from-stone-600 dark:to-stone-700 rounded-full shadow-inner" />
                       </div>
                     ) : (
-                      <div className="w-4 h-10 bg-stone-200 dark:bg-stone-700 rounded-full opacity-30" />
+                      <div className="w-3 sm:w-4 h-8 sm:h-10 bg-stone-200 dark:bg-stone-700 rounded-full opacity-30" />
                     )}
                   </div>
                 ))}
               </div>
 
-              <div className="text-center mb-6">
+              <div className="text-center mb-4 sm:mb-6">
                 {!candlesLit && !wishMade && (
                   <button
                     onClick={makeWish}
-                    className="text-sm tracking-[0.2em] uppercase text-stone-500 hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-300 mb-4 hover:tracking-[0.3em]"
+                    className="text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] uppercase text-stone-500 hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-300 mb-4 hover:tracking-[0.25em] sm:hover:tracking-[0.3em]"
                   >
                     ✦ Make a wish ✦
                   </button>
                 )}
                 {wishMade && (
-                  <p className="text-sm text-amber-600 dark:text-amber-400 font-medium animate-fade-in">
+                  <p className="text-xs sm:text-sm text-amber-600 dark:text-amber-400 font-medium animate-fade-in">
                     Your wish has been sent to the stars ✦
                   </p>
                 )}
               </div>
 
-              <div className="flex justify-center gap-4">
+              <div className="flex justify-center gap-3 sm:gap-4">
                 <button
                   onClick={blowCandles}
                   disabled={!candlesLit}
-                  className="px-8 py-3 text-sm rounded-full bg-gradient-to-r from-stone-800 to-stone-700 dark:from-stone-200 dark:to-stone-300 text-white dark:text-stone-900 hover:from-stone-700 hover:to-stone-600 dark:hover:from-stone-300 dark:hover:to-stone-400 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                  className="px-6 sm:px-8 py-2.5 sm:py-3 text-xs sm:text-sm rounded-full bg-gradient-to-r from-stone-800 to-stone-700 dark:from-stone-200 dark:to-stone-300 text-white dark:text-stone-900 hover:from-stone-700 hover:to-stone-600 dark:hover:from-stone-300 dark:hover:to-stone-400 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 >
                   Blow
                 </button>
                 <button
                   onClick={relightCandles}
                   disabled={candlesLit}
-                  className="px-8 py-3 text-sm rounded-full border border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed hover:-translate-y-0.5"
+                  className="px-6 sm:px-8 py-2.5 sm:py-3 text-xs sm:text-sm rounded-full border border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed hover:-translate-y-0.5"
                 >
                   Relight
                 </button>
@@ -377,23 +377,23 @@ export default function Home() {
         </div>
 
         {/* Gifts Section */}
-        <div className="mb-20">
-          <p className="text-xs tracking-[0.3em] uppercase text-stone-400 dark:text-stone-500 text-center mb-8">
+        <div className="mb-12 sm:mb-16 md:mb-20">
+          <p className="text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase text-stone-400 dark:text-stone-500 text-center mb-6 sm:mb-8">
             Birthday Wishes
           </p>
-          <div className="grid grid-cols-5 gap-4">
+          <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3 md:gap-4">
             {gifts.map((gift, i) => (
               <button
                 key={i}
                 onClick={() => setOpenGift(openGift === i ? null : i)}
-                className={`group relative p-6 rounded-2xl text-center transition-all duration-500 ${
+                className={`group relative p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl text-center transition-all duration-500 ${
                   openGift === i
                     ? "bg-gradient-to-br from-stone-800 to-stone-900 dark:from-stone-200 dark:to-stone-100 text-white dark:text-stone-900 scale-105 shadow-xl"
                     : "bg-white/80 dark:bg-stone-900/80 backdrop-blur hover:bg-white dark:hover:bg-stone-800 border border-stone-100/50 dark:border-stone-800/50 hover:shadow-lg hover:-translate-y-1"
                 }`}
               >
-                <span className="text-3xl mb-3 block">{gift.icon}</span>
-                <span className={`text-xs font-medium tracking-wide ${openGift === i ? "" : "text-stone-600 dark:text-stone-400"}`}>
+                <span className="text-xl sm:text-2xl md:text-3xl mb-2 sm:mb-3 block">{gift.icon}</span>
+                <span className={`text-[10px] sm:text-xs font-medium tracking-wide ${openGift === i ? "" : "text-stone-600 dark:text-stone-400"}`}>
                   {gift.title}
                 </span>
               </button>
@@ -403,12 +403,12 @@ export default function Home() {
 
         {/* Gift Message */}
         {openGift !== null && (
-          <div className="mb-20 animate-fade-in">
+          <div className="mb-12 sm:mb-16 md:mb-20 animate-fade-in">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-rose-200/30 to-purple-200/30 dark:from-stone-700/30 dark:to-stone-600/30 rounded-2xl blur-xl" />
-              <div className="relative bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-2xl p-10 border border-white/50 dark:border-stone-800/50 text-center shadow-xl">
-                <span className="text-4xl mb-4 block">{gifts[openGift].icon}</span>
-                <p className="text-stone-600 dark:text-stone-300 font-light text-lg italic">
+              <div className="absolute inset-0 bg-gradient-to-r from-rose-200/30 to-purple-200/30 dark:from-stone-700/30 dark:to-stone-600/30 rounded-xl sm:rounded-2xl blur-xl" />
+              <div className="relative bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 border border-white/50 dark:border-stone-800/50 text-center shadow-xl">
+                <span className="text-3xl sm:text-4xl mb-3 sm:mb-4 block">{gifts[openGift].icon}</span>
+                <p className="text-stone-600 dark:text-stone-300 font-light text-base sm:text-lg italic">
                   {gifts[openGift].desc}
                 </p>
               </div>
@@ -417,32 +417,32 @@ export default function Home() {
         )}
 
         {/* Countdown Section */}
-        <div className="mb-20">
-          <p className="text-xs tracking-[0.3em] uppercase text-stone-400 dark:text-stone-500 text-center mb-8">
+        <div className="mb-12 sm:mb-16 md:mb-20">
+          <p className="text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase text-stone-400 dark:text-stone-500 text-center mb-6 sm:mb-8">
             Countdown
           </p>
-          <div className="grid grid-cols-3 gap-4">
-            <div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-2xl p-8 border border-white/50 dark:border-stone-800/50 text-center shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl font-serif italic text-stone-800 dark:text-stone-100 mb-2">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+            <div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/50 dark:border-stone-800/50 text-center shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-stone-800 dark:text-stone-100 mb-1 sm:mb-2">
                 {daysUntilBirthday}
               </div>
-              <div className="text-[10px] tracking-[0.2em] uppercase text-stone-400">
+              <div className="text-[8px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] uppercase text-stone-400">
                 days
               </div>
             </div>
-            <div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-2xl p-8 border border-white/50 dark:border-stone-800/50 text-center shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl font-serif italic text-stone-800 dark:text-stone-100 mb-2">
+            <div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/50 dark:border-stone-800/50 text-center shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-stone-800 dark:text-stone-100 mb-1 sm:mb-2">
                 Oct
               </div>
-              <div className="text-[10px] tracking-[0.2em] uppercase text-stone-400">
+              <div className="text-[8px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] uppercase text-stone-400">
                 24th
               </div>
             </div>
-            <div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-2xl p-8 border border-white/50 dark:border-stone-800/50 text-center shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl font-serif italic text-stone-800 dark:text-stone-100 mb-2">
+            <div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/50 dark:border-stone-800/50 text-center shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-stone-800 dark:text-stone-100 mb-1 sm:mb-2">
                 ♡
               </div>
-              <div className="text-[10px] tracking-[0.2em] uppercase text-stone-400">
+              <div className="text-[8px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] uppercase text-stone-400">
                 forever
               </div>
             </div>
@@ -450,43 +450,43 @@ export default function Home() {
         </div>
 
         {/* Music Section */}
-        <div className="mb-20">
+        <div className="mb-12 sm:mb-16 md:mb-20">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 dark:from-stone-950 dark:via-stone-900 dark:to-stone-950 rounded-3xl blur-xl opacity-50" />
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 dark:from-stone-950 dark:via-stone-900 dark:to-stone-950 p-10 shadow-2xl">
+            <div className="absolute inset-0 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 dark:from-stone-950 dark:via-stone-900 dark:to-stone-950 rounded-2xl sm:rounded-3xl blur-xl opacity-50" />
+            <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 dark:from-stone-950 dark:via-stone-900 dark:to-stone-950 p-6 sm:p-8 md:p-10 shadow-2xl">
               {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-72 h-72 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-              <div className="absolute bottom-0 left-0 w-56 h-56 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+              <div className="absolute top-0 right-0 w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
               
               <div className="relative">
-                <p className="text-[10px] tracking-[0.5em] uppercase text-stone-500 mb-8 text-center">
+                <p className="text-[8px] sm:text-[10px] tracking-[0.3em] sm:tracking-[0.5em] uppercase text-stone-500 mb-6 sm:mb-8 text-center">
                   Dedicated To You
                 </p>
                 
-                <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
+                <div className="flex flex-col items-center gap-5 sm:gap-6 md:flex-row md:gap-8 mb-8 sm:mb-10">
                   <div className="relative flex-shrink-0">
-                    <div className="absolute -inset-2 bg-gradient-to-br from-rose-500/20 to-purple-500/20 rounded-2xl blur-lg" />
-                    <div className="relative w-28 h-28 rounded-2xl bg-gradient-to-br from-stone-700 to-stone-800 flex items-center justify-center shadow-2xl">
-                      <svg className="w-12 h-12 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                    <div className="absolute -inset-2 bg-gradient-to-br from-rose-500/20 to-purple-500/20 rounded-xl sm:rounded-2xl blur-lg" />
+                    <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-xl sm:rounded-2xl bg-gradient-to-br from-stone-700 to-stone-800 flex items-center justify-center shadow-2xl">
+                      <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                       </svg>
                     </div>
                   </div>
                   
                   <div className="text-center md:text-left">
-                    <h3 className="text-xl font-serif italic text-stone-100 mb-2">
+                    <h3 className="text-lg sm:text-xl font-serif italic text-stone-100 mb-1 sm:mb-2">
                       Merry Christmas, i miss you
                     </h3>
-                    <p className="text-sm text-stone-400 mb-3">
+                    <p className="text-xs sm:text-sm text-stone-400 mb-2 sm:mb-3">
                       Alex Crichton
                     </p>
-                    <p className="text-xs text-stone-500 italic">
+                    <p className="text-[10px] sm:text-xs text-stone-500 italic">
                       &ldquo;What if I call and you pick up the phone?&rdquo;
                     </p>
                   </div>
                 </div>
                 
-                <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 mb-8">
+                <div className="relative w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 mb-6 sm:mb-8">
                   <iframe
                     ref={iframeRef}
                     src={`https://www.youtube.com/embed/RdxEnXIX23g?rel=0&enablejsapi=1${musicStarted ? "&autoplay=1" : ""}`}
@@ -497,14 +497,14 @@ export default function Home() {
                   />
                 </div>
                 
-                <div className="flex justify-center gap-10">
+                <div className="flex justify-center gap-6 sm:gap-8 md:gap-10">
                   <a
                     href="https://open.spotify.com/track/2GFrDW0pEXpjbNrKvFYI8k"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-stone-500 hover:text-stone-300 transition-colors flex items-center gap-2 group"
+                    className="text-[10px] sm:text-xs text-stone-500 hover:text-stone-300 transition-colors flex items-center gap-1.5 sm:gap-2 group"
                   >
-                    <svg className="w-4 h-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
                     </svg>
                     Spotify
@@ -513,9 +513,9 @@ export default function Home() {
                     href="https://music.apple.com/us/song/merry-christmas-i-miss-you/6784789929"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-stone-500 hover:text-stone-300 transition-colors flex items-center gap-2 group"
+                    className="text-[10px] sm:text-xs text-stone-500 hover:text-stone-300 transition-colors flex items-center gap-1.5 sm:gap-2 group"
                   >
-                    <svg className="w-4 h-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M23.994 6.124a9.23 9.23 0 0 0-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043A5.022 5.022 0 0 0 19.2.25a10.58 10.58 0 0 0-1.924-.24C16.376 0 15.704 0 14.004 0H9.996c-1.7 0-2.372 0-3.276.01a10.58 10.58 0 0 0-1.924.24A5.022 5.022 0 0 0 3.426.89C2.308 1.624 1.562 2.624 1.246 3.934a9.23 9.23 0 0 0-.24 2.19C1 6.444 1 7.116 1 8.816v6.368c0 1.7 0 2.372.01 3.276.006.666.06 1.33.18 1.98.317 1.31 1.062 2.31 2.18 3.043a5.022 5.022 0 0 0 1.868.64c.628.13 1.276.184 1.924.24.904.01 1.576.01 3.276.01h4.008c1.7 0 2.372 0 3.276-.01a10.58 10.58 0 0 0 1.924-.24 5.022 5.022 0 0 0 1.868-.64c1.118-.734 1.862-1.734 2.18-3.043.12-.65.174-1.314.18-1.98.01-.904.01-1.576.01-3.276V8.816c0-1.7 0-2.372-.01-3.276-.006-.666-.06-1.33-.18-1.98zM17.994 15.95l-.004.006c-1.37 2.438-3.816 3.924-6.634 4.016a.75.75 0 1 1-.026-1.5c2.16-.07 4.014-1.15 5.18-2.904.586-.884.916-1.958.916-3.08v-.212a.75.75 0 0 1 1.5 0v.212c0 1.414-.41 2.752-1.142 3.912l-.004.002v-.354zM12 15.75a.75.75 0 0 1-.75-.75v-3a.75.75 0 0 1 1.5 0v3a.75.75 0 0 1-.75.75z" />
                     </svg>
                     Apple Music
@@ -527,8 +527,8 @@ export default function Home() {
         </div>
 
         {/* Footer Section */}
-        <div className="text-center space-y-8 pb-10">
-          <div className="flex justify-center gap-2">
+        <div className="text-center space-y-6 sm:space-y-8 pb-8 sm:pb-10">
+          <div className="flex justify-center gap-1.5 sm:gap-2">
             {Array.from({ length: 7 }).map((_, i) => (
               <div
                 key={i}
@@ -537,22 +537,22 @@ export default function Home() {
             ))}
           </div>
 
-          <p className="text-stone-500 dark:text-stone-400 font-light leading-relaxed max-w-sm mx-auto text-sm italic">
+          <p className="text-stone-500 dark:text-stone-400 font-light leading-relaxed max-w-xs sm:max-w-sm md:max-w-md mx-auto text-xs sm:text-sm italic px-4">
             May all your dreams come true on this special day and throughout the
             coming year.
           </p>
 
-          <div className="flex justify-center gap-4 pt-2">
-            <button className="px-8 py-3 text-sm rounded-full bg-gradient-to-r from-stone-800 to-stone-700 dark:from-stone-200 dark:to-stone-300 text-white dark:text-stone-900 hover:from-stone-700 hover:to-stone-600 dark:hover:from-stone-300 dark:hover:to-stone-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-2">
+            <button className="px-6 sm:px-8 py-2.5 sm:py-3 text-xs sm:text-sm rounded-full bg-gradient-to-r from-stone-800 to-stone-700 dark:from-stone-200 dark:to-stone-300 text-white dark:text-stone-900 hover:from-stone-700 hover:to-stone-600 dark:hover:from-stone-300 dark:hover:to-stone-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 order-2 sm:order-1">
               Share
             </button>
             <a
               href="https://www.facebook.com/messages/e2ee/t/26505547669032397"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 text-sm rounded-full border border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 transition-all duration-300 inline-flex items-center gap-2 hover:-translate-y-0.5"
+              className="px-6 sm:px-8 py-2.5 sm:py-3 text-xs sm:text-sm rounded-full border border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 transition-all duration-300 inline-flex items-center justify-center gap-2 hover:-translate-y-0.5 order-1 sm:order-2"
             >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.908 1.432 5.506 3.674 7.21V22l3.736-2.049c.995.276 2.042.422 3.102.422h.488C17.523 20.373 22 16.228 22 11.243 22 6.145 17.523 2 12 2zm1.073 13.38l-2.557-2.736L6.5 15.38l5.107-5.437 2.608 2.736 5.018-2.736-5.107 5.437z" />
               </svg>
               Send Wishes
@@ -561,8 +561,8 @@ export default function Home() {
         </div>
 
         {/* Made with love */}
-        <div className="pt-10 border-t border-stone-200/50 dark:border-stone-800/50 text-center">
-          <p className="text-[10px] tracking-[0.3em] uppercase text-stone-300 dark:text-stone-600">
+        <div className="pt-8 sm:pt-10 border-t border-stone-200/50 dark:border-stone-800/50 text-center pb-4">
+          <p className="text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] uppercase text-stone-300 dark:text-stone-600">
             Made with love
           </p>
         </div>
